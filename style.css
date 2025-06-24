@@ -1,0 +1,917 @@
+/* Reset */
+body {
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+/* Top Bar */
+.top-bar {
+  background-color: #00bcd4;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 15px;
+  flex-wrap: wrap;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-left a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-left: 8px;
+}
+
+.follow-text {
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.top-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top-right span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.email-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* Header */
+.main-header {
+  background-color: white;
+  padding: 8px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 5px 30px;
+}
+
+.navbar,
+.main-header {
+  position: relative;
+  z-index: 1500; /* Higher than the welcome section */
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 3px 10px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  background-color: #00bcd4;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links li a:active {
+  transform: scale(0.96);
+  background-color: #0097a7;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1101;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Base dropdown menu styling */
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 2000;
+}
+
+/* Show the dropdown */
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Rotate the arrow icon */
+.dropdown-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-toggle i.rotated {
+  transform: rotate(180deg);
+}
+
+/* Optional: spacing and styling inside the dropdown */
+.dropdown-menu li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+/* Rotate arrow icon */
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-menu {
+  list-style: none;   /* removes bullet points */
+  padding-left: 10px;    /* optional: removes extra spacing */
+  margin: 0;          /* optional: removes any default margin */
+}
+
+.welcome-section {
+  position: relative;
+  z-index: 1;
+  height: 85vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 0 20px;
+  background-color: #000; /* or any solid dark color to mask the body background */
+}
+
+
+.background-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.background-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+  filter: brightness(40%);
+  z-index: 1;
+}
+
+/* Reset transforms */
+.background-slideshow .slide {
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+}
+
+.background-slideshow .slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* When a slide enters from the left */
+.background-slideshow .slide.enter {
+  transform: translateX(0%);
+}
+
+/* When a slide exits to the left */
+.background-slideshow .slide.exit {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.welcome-content h1 {
+  font-size: 3.2rem; /* Increased size */
+  margin-bottom: 20px;
+}
+
+.welcome-content p {
+  font-size: 1.4rem; /* Increased size */
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+.welcome-buttons {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 36px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+}
+
+.btn-secondary {
+  background-color: none;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: #09afc2;
+}
+
+/* Project Section Styling */
+.projects-preview {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.projects-preview .section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.projects-preview .section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project Card Container */
+.project-card {
+  perspective: 1200px;
+  height: 400px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: rotateY(10deg) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Inner */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Card Faces */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Front Face */
+.card-front {
+  background: #fff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Back Face */
+.card-back {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  transform: rotateY(180deg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Image Styling */
+.card-front img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Project Info Block */
+.project-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+}
+
+.project-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.project-info p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* View More Button Section */
+.view-more {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  background-color: #00bcd4;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.view-more-btn:hover {
+  background-color: #0097a7;
+  transform: translateX(4px);
+}
+
+/* Animation Keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Delay for Each Card */
+.project-card:nth-child(1) { animation-delay: 0.2s; }
+.project-card:nth-child(2) { animation-delay: 0.4s; }
+.project-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* Services Section Styling */
+.services-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.services-section .section-title {
+  font-size: 2rem;
+  font-weight: 700; /* Bold like project title */
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.services-section .section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Service Card */
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: white;
+}
+
+/* Special Styling for the Link Card */
+.service-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  background-color: #00bcd4;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.service-link-card:hover {
+  background-color: #0097a7;
+}
+
+/* Icon Styling */
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #00bcd4;
+  transition: color 0.3s ease;
+}
+
+/* Change icon color on hover */
+.service-card:hover .service-icon {
+  color: white;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Apply continuous bounce on hover */
+.service-card:hover .service-icon {
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+
+
+
+
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+}
+
+/* Show dropdown on hover for desktop */
+@media (min-width: 769px) {
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px 30px;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 999;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .nav-links.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+ .nav-links li {
+  opacity: 0;
+  transform: translate(-20px, 20px); /* Start from bottom-left */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.nav-links.active li {
+  opacity: 1;
+  transform: translate(0, 0); /* Slide to normal position */
+}
+
+
+  .nav-links.active li:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  .nav-links.active li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .nav-links.active li:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  .nav-links.active li:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  .nav-links.active li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+}
+
+/* Dropdown menu styling in mobile view */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    transform: translateX(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .dropdown.open .dropdown-menu {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .dropdown-menu li {
+    margin-bottom: 10px;
+  }
+
+  .dropdown-menu li:last-child {
+    margin-bottom: 0;
+  }
+
+  .dropdown-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-arrow.rotated {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-section {
+    position: relative;
+    height: 65vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .background-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  /* Slide animation styles (shared by all views) */
+.background-slideshow .slide {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.background-slideshow .slide.active.enter {
+  transform: translateX(0%);
+  opacity: 1;
+  z-index: 2;
+}
+
+.background-slideshow .slide.exit {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 0;
+}
+
+
+  .background-slideshow .slide.active {
+    opacity: 1; /* Darker for text readability */
+  }
+
+  .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); /* Makes the background darker */
+    z-index: 1;
+  }
+  
+  .welcome-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 100%;
+  }
+
+  .welcome-content h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .welcome-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+
+  .welcome-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .welcome-buttons .btn {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-card {
+    height: 400px; /* Maintain card height for flipping */
+    max-width: 100%;
+  }
+
+  .card-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute; /* KEEP absolute so flip works */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-front {
+    background: #fff;
+    z-index: 2;
+  }
+
+  .card-back {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .card-front img {
+    height: 180px;
+  }
+
+  .view-more {
+    margin-top: 20px;
+  }
+
+  .view-more-btn {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Desktop: flip on hover */
+@media (min-width: 769px) {
+  .project-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Tablet View: 2 columns */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile View: 1 column */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .service-card i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+        <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-left">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <span class="follow-text">Follow us on social media</span>
+      </div>
+      <div class="top-right">
+        <span><i class="fas fa-phone-alt"></i> +234 904 461 6648</span>
+        <span><i class="fas fa-envelope"></i> 
+          <a href="mailto:contact@youragency.com" class="email-link">bravo.solutions@yahoo.com</a>
+        </span>
+      </div>
+    </div>
+
+     <!-- Header / Navbar -->
+    <header class="main-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Bravo Solutions Logo" />
+        </a>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" id="focus">Projects</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              Our Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fas fa-paint-brush"></i> Graphics Design</a></li>
+              <li><a href="#"><i class="fas fa-code"></i> Web Design</a></li>
+              <li><a href="#"><i class="fas fa-cube"></i> Product Design</a></li>
+              <li><a href="#"><i class="fas fa-bullhorn"></i> Branding</a></li>
+              <li><a href="#"><i class="fas fa-vector-square"></i> UI/UX</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- PROJECTS HERO -->
+<section class="proj-hero" id="projects-hero">
+  <div class="proj-hero__inner">
+    <h1 class="proj-hero__title" data-aos="fade-up">Our Work</h1>
+    <p class="proj-hero__subtitle" data-aos="fade-up" data-aos-delay="150">
+      A selection of graphics, websites, and product interfaces crafted with strategy and style.
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS FILTER + GRID -->
+<section class="proj-section" id="projects">
+  <div class="proj-container">
+
+    <!-- Filters -->
+    <div class="proj-filters" role="tablist" aria-label="Project categories">
+      <button class="proj-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="proj-filter-btn" data-filter="graphics" role="tab" aria-selected="false">Graphics</button>
+      <button class="proj-filter-btn" data-filter="web" role="tab" aria-selected="false">Web Design</button>
+      <button class="proj-filter-btn" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+      <button class="proj-filter-btn" data-filter="ui/ux" role="tab" aria-selected="false">UI/UX</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="proj-grid">
+      <!-- Card -->
+    
+      <!-- Graphics -->
+      <article class="proj-card" data-category="graphics" data-aos="fade-up">
+        <img class="proj-card__img" src="images/eflyer.png" alt="Event flyer concept" />
+        <div class="proj-card__label">Graphics • Poster</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Festival Poster</h3>
+            <p>Bold typography and vibrant gradients for a high-energy cultural festival campaign.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card" data-category="graphics" data-aos="fade-up" data-aos-delay="100">
+        <img class="proj-card__img" src="images/WIZARD.png" alt="Brand social tiles" />
+        <div class="proj-card__label">Graphics • Social</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Social Kit</h3>
+            <p>Reusable templates that keep brand voice consistent across platforms.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Web -->
+      <article class="proj-card" data-category="web" data-aos="fade-up" data-aos-delay="200">
+        <img class="proj-card__img" src="images/webisteulid.png" alt="SaaS landing page" />
+        <div class="proj-card__label">Web • Landing</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>SaaS Landing</h3>
+            <p>Speed-optimized, responsive layout focused on clear flows and conversions.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card" data-category="web" data-aos="fade-up">
+        <img class="proj-card__img" src="images/developer.jpg" alt="Portfolio website" />
+        <div class="proj-card__label">Web • Portfolio</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Artist Portfolio</h3>
+            <p>Clean aesthetic, smooth galleries, and accessible navigation.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+       <!-- Product -->
+      <article class="proj-card" data-category="ui/ux" data-aos="fade-up" data-aos-delay="100">
+        <img class="proj-card__img" src="images/Appdesign.jpg" alt="Mobile app UI" />
+        <div class="proj-card__label">UI/UX • App</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Fitness App</h3>
+            <p>Onboarding flows and dashboards built around clarity and momentum.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card" data-category="ui/ux" data-aos="fade-up" data-aos-delay="200">
+        <img class="proj-card__img" src="images/Appdesign.jpg" alt="Ecommerce product UI" />
+        <div class="proj-card__label">UI/UX • eCommerce</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Shop Experience</h3>
+            <p>Friction-less product discovery and checkout with micro-interactions.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+        <!-- Branding -->
+      <article class="proj-card" data-category="branding" data-aos="fade-up" data-aos-delay="100">
+        <img class="proj-card__img" src="images/branding.png" alt="Mobile app UI" />
+        <div class="proj-card__label">Branding • Logo</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Automobile</h3>
+            <p>Onboarding flows and dashboards built around clarity and momentum.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card" data-category="branding" data-aos="fade-up" data-aos-delay="200">
+        <img class="proj-card__img" src="images/ceo 1.png" alt="Ecommerce product UI" />
+        <div class="proj-card__label">Branding • Design</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Company Brand Design</h3>
+            <p>Friction-less product discovery and checkout with micro-interactions.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Ui/Ux -->
+      <article class="proj-card" data-category="ui/ux" data-aos="fade-up" data-aos-delay="100">
+        <img class="proj-card__img" src="images/UiUx.jpg" alt="Mobile app UI" />
+        <div class="proj-card__label">UI/UX • Product UI</div>
+        <div class="proj-card__overlay">
+          <div class="proj-card__overlay-inner">
+            <h3>Shopping app UI</h3>
+            <p>Onboarding flows and dashboards built around clarity and momentum.</p>
+            <a href="project-details.html" class="proj-card__link">
+              View Project <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- CTA -->
+    <div class="proj-cta">
+      <a href="contact.html" class="proj-cta__btn">
+        Like what you see? Let’s work together <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECT QUICK VIEW MODAL -->
+  <div class="proj-modal" id="projModal" aria-hidden="true">
+    <div class="proj-modal__backdrop" data-close-modal></div>
+
+    <div class="proj-modal__dialog" role="dialog" aria-modal="true"
+        aria-labelledby="projModalTitle" aria-describedby="projModalDesc">
+      <button class="proj-modal__close" type="button" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="proj-modal__media">
+        <img src="" alt="" id="projModalImg">
+      </div>
+
+      <div class="proj-modal__body">
+        <h3 id="projModalTitle"></h3>
+        <p id="projModalDesc"></p>
+
+        <a href="#" class="proj-modal__cta" id="projModalLink">
+          Open full case study <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        const hamburger = document.querySelector(".hamburger");
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      }
+    </script>
+    
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const dropdown = document.querySelector(".dropdown");
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+        const menu = dropdown.querySelector(".dropdown-menu");
+        const arrow = dropdown.querySelector(".dropdown-arrow");
+
+        toggle.addEventListener("click", (e) => {
+          e.preventDefault();
+          dropdown.classList.toggle("open");
+          arrow.classList.toggle("rotated");
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("open");
+            arrow.classList.remove("rotated");
+          }
+        });
+      });
+    </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Init AOS once
+      if (window.AOS) AOS.init({ duration: 800, once: false, easing: 'ease-out' });
+
+      const buttons = document.querySelectorAll('.proj-filter-btn');
+      const cards   = document.querySelectorAll('.proj-card');
+
+      function setActive(btn){
+        buttons.forEach(b => { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-selected', b===btn); });
+      }
+
+      function filterProjects(cat){
+        cards.forEach(card => {
+          const categories = (card.dataset.category || '').split(',').map(s => s.trim().toLowerCase());
+          const match = (cat === 'all') || categories.includes(cat);
+
+          if (match){
+            // show with small entrance
+            if (card.classList.contains('is-hidden')){
+              card.classList.remove('is-hidden');
+              // force reflow so animation plays
+              void card.offsetWidth;
+              card.classList.add('is-showing');
+              setTimeout(() => card.classList.remove('is-showing'), 320);
+            }
+          } else {
+            // fade out then hide
+            if (!card.classList.contains('is-hidden')){
+              card.classList.add('is-hiding');
+              setTimeout(() => {
+                card.classList.remove('is-hiding');
+                card.classList.add('is-hidden');
+              }, 220);
+            }
+          }
+        });
+        // Recalculate AOS positions after DOM changes
+        if (window.AOS && AOS.refreshHard) AOS.refreshHard();
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          setActive(btn);
+          filterProjects(btn.dataset.filter);
+        });
+        // keyboard support
+        btn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+        });
+      });
+
+      // Default: show all
+      filterProjects('all');
+    });
+  </script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 1) Attach/ensure Quick View buttons exist
+  document.querySelectorAll('.proj-card').forEach(card => {
+    const overlayInner = card.querySelector('.proj-card__overlay-inner');
+    if (!overlayInner) return;
+
+    // Create button only if not present
+    if (!overlayInner.querySelector('.proj-card__quick')) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'proj-card__quick';
+      btn.textContent = 'Quick View';
+      overlayInner.appendChild(btn);
+    }
+  });
+
+  // 2) Modal elements
+  const modal = document.getElementById('projModal');
+  const dialog = modal.querySelector('.proj-modal__dialog');
+  const backdrop = modal.querySelector('[data-close-modal]');
+  const closeBtn = modal.querySelector('.proj-modal__close');
+  const imgEl = document.getElementById('projModalImg');
+  const titleEl = document.getElementById('projModalTitle');
+  const descEl = document.getElementById('projModalDesc');
+  const linkEl = document.getElementById('projModalLink');
+
+  let lastFocused = null;
+
+  function openModalFromCard(card){
+    // Save focus
+    lastFocused = document.activeElement;
+
+    // Pull data from card
+    const img = card.querySelector('.proj-card__img');
+    const h3 = card.querySelector('.proj-card__overlay-inner h3');
+    const p  = card.querySelector('.proj-card__overlay-inner p');
+    const link = card.querySelector('.proj-card__overlay-inner .proj-card__link');
+
+    const modalSrc = img?.getAttribute('data-modal-src') || img?.src || '';
+    imgEl.src = modalSrc;
+    imgEl.alt = (h3?.textContent || 'Project preview');
+
+    titleEl.textContent = h3?.textContent || 'Project';
+    descEl.textContent = p?.textContent || '';
+    linkEl.href = link?.getAttribute('href') || '#';
+
+    // Show modal
+    modal.classList.add('is-open','is-opening');
+    document.body.classList.add('modal-open');
+
+    // Focus close button after tiny delay for iOS
+    setTimeout(() => { closeBtn.focus(); modal.classList.remove('is-opening'); }, 20);
+
+    // Refresh AOS positions behind modal (optional)
+    if (window.AOS && AOS.refreshHard) AOS.refreshHard();
+
+    // Trap focus
+    trapFocus(dialog);
+  }
+
+  function closeModal(){
+    modal.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+    imgEl.src = ''; // free memory
+
+    // Restore focus
+    if (lastFocused && typeof lastFocused.focus === 'function') {
+      lastFocused.focus();
+    }
+  }
+
+  // 3) Open: delegate clicks on Quick View buttons
+  document.addEventListener('click', e => {
+    const quick = e.target.closest('.proj-card__quick');
+    if (quick){
+      const card = quick.closest('.proj-card');
+      if (card){ openModalFromCard(card); }
+    }
+  });
+
+  // 4) Close handlers
+  backdrop.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+
+  // 5) Focus trap util
+  function trapFocus(container){
+    const selectors = [
+      'a[href]', 'button:not([disabled])', 'textarea', 'input[type="text"]',
+      'input[type="email"]', 'input[type="tel"]', 'input[type="search"]',
+      'input[type="url"]', 'input[type="number"]', 'select', '[tabindex]:not([tabindex="-1"])'
+    ];
+    const focusables = Array.from(container.querySelectorAll(selectors.join(',')))
+      .filter(el => el.offsetParent !== null);
+    if (!focusables.length) return;
+
+    const first = focusables[0];
+    const last  = focusables[focusables.length - 1];
+
+    container.addEventListener('keydown', function onKey(e){
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }, { once:true });
+
+    // Re-attach on every open to keep list current
+  }
+});
+</script>
+
+
+</body>
+</html>

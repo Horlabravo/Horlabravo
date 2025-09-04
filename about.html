@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <script>
+      if (window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+        document.body.classList.add('is-touch');
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-left">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <span class="follow-text">Follow us on social media</span>
+      </div>
+      <div class="top-right">
+        <span><i class="fas fa-phone-alt"></i> +234 904 461 6648</span>
+        <span><i class="fas fa-envelope"></i> 
+          <a href="mailto:contact@youragency.com" class="email-link">bravo.solutions@yahoo.com</a>
+        </span>
+      </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="main-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Bravo Solutions Logo" />
+        </a>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              Our Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fas fa-paint-brush"></i> Graphics Design</a></li>
+              <li><a href="#"><i class="fas fa-code"></i> Web Design</a></li>
+              <li><a href="#"><i class="fas fa-cube"></i> Product Design</a></li>
+              <li><a href="#"><i class="fas fa-bullhorn"></i> Branding</a></li>
+              <li><a href="#"><i class="fas fa-vector-square"></i> UI/UX</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" id="focus">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="about-hero-section">
+    <div class="about-hero-container">
+        <div class="about-text-content">
+        <h1>Get to Know Us</h1>
+        <p>
+            We are passionate creatives committed to delivering top-notch digital solutions. From graphic and web design to branding and UI/UX, we combine creativity with strategy to help brands stand out.
+        </p>
+        <a href="#about-us" class="btn-about-scroll">
+            Learn More <i class="fas fa-arrow-down"></i>
+        </a>
+        </div>
+        <div class="about-image-content">
+        <img src="images/round frame.png" alt="Creative teamwork illustration" />
+        </div>
+    </div>
+    </section>
+
+  <section class="about-intro-section" id="about-us">
+    <div class="about-intro-container">
+      <div class="about-intro-image" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/WIZARD.png" alt="Creative team at work" />
+      </div>
+      <div class="about-intro-text" data-aos="fade-left">
+        <h2>Who We Are</h2>
+        <p>
+          We are a creative studio passionate about crafting standout brand identities, intuitive user interfaces, and compelling digital experiences. With a team of visionary designers and strategic thinkers, we bring bold ideas to life through impactful visuals and purposeful design.
+        </p>
+        <a href="projects.html" class="btn-explore">
+          See Our Work <i class="fas fa-arrow-right arrow-icon"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-highlights-section">
+    <div class="highlights-container">
+      <div class="highlight-card" data-aos="zoom-in">
+        <i class="fas fa-users"></i>
+        <h3><span class="counter" data-target="120">0</span>+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="highlight-card" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-layer-group"></i>
+        <h3><span class="counter" data-target="100">0</span>+</h3>
+        <p>Brands Built</p>
+      </div>
+      <div class="highlight-card" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-brain"></i>
+        <h3><span class="counter" data-target="10">0</span>+</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="highlight-card" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-award"></i>
+        <h3><span class="counter" data-target="20">0</span>+</h3>
+        <p>Design Awards</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flip Card Section -->
+  <section class="core-values-section">
+    <h2 class="section-title">Our Core Values</h2>
+    <p class="section-description">These values drive everything we do — from strategy to creativity and results.</p>
+
+    <div class="core-values-grid">
+      <!-- Card 1 -->
+      <div class="flip-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Creativity</h3>
+          </div>
+          <div class="flip-card-back">
+            <p>We bring bold, imaginative ideas to life through design innovation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flip-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-handshake"></i>
+            <h3>Integrity</h3>
+          </div>
+          <div class="flip-card-back">
+            <p>We build trust by being transparent and honest in all we do.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flip-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-users"></i>
+            <h3>Collaboration</h3>
+          </div>
+          <div class="flip-card-back">
+            <p>We work closely with clients and each other to create great results.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flip-card" data-aos="fade-up" data-aos-delay="500">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <i class="fas fa-award"></i>
+            <h3>Excellence</h3>
+          </div>
+          <div class="flip-card-back">
+            <p>We are committed to delivering the highest quality in every detail.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wwd-section" id="what-we-do">
+    <div class="wwd-container">
+      
+      <!-- HEADER with gradient background -->
+      <div class="wwd-header-wrap">
+        <div class="wwd-header">
+          <h2 class="wwd-title">What We Do</h2>
+          <p class="wwd-subtitle">Creative solutions crafted to lift your brand and products.</p>
+        </div>
+      </div>
+
+      <div class="wwd-grid">
+        <!-- Card 1 -->
+        <article class="wwd-card" tabindex="0" data-aos="zoom-in">
+          <img src="images/eflyer.png" alt="Graphics design" class="wwd-card-img" />
+          <div class="wwd-card-label">
+            <i class="fas fa-paint-brush"></i>
+            <span>Graphics Design</span>
+          </div>
+          <div class="wwd-card-overlay">
+            <div class="wwd-overlay-inner">
+              <h3>Graphics Design</h3>
+              <p>Designs that communicate clearly and look exceptional — brand assets, marketing, social visuals and more.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="wwd-card" tabindex="0" data-aos="zoom-in">
+          <img src="images/webisteulid.png" alt="Web design" class="wwd-card-img" />
+          <div class="wwd-card-label">
+            <i class="fas fa-globe"></i>
+            <span>Web Design</span>
+          </div>
+          <div class="wwd-card-overlay">
+            <div class="wwd-overlay-inner">
+              <h3>Web Design</h3>
+              <p>Responsive, accessible websites focused on conversion, speed and delightful UX.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="wwd-card" tabindex="0" data-aos="zoom-in">
+          <img src="images/Appdesign.jpg" alt="Product design" class="wwd-card-img" />
+          <div class="wwd-card-label">
+            <i class="fas fa-cube"></i>
+            <span>Product Design</span>
+          </div>
+          <div class="wwd-card-overlay">
+            <div class="wwd-overlay-inner">
+              <h3>Product Design</h3>
+              <p>User-centred product design from concept to prototype — clear journeys and delightful interfaces.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="wwd-cta-wrap">
+        <a href="/services" class="wwd-cta">Go to our services <i class="fas fa-arrow-right wwd-cta-arrow"></i></a>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+          const navLinks = document.getElementById("navLinks");
+          const hamburger = document.querySelector(".hamburger");
+          navLinks.classList.toggle("active");
+          hamburger.classList.toggle("active");
+        }
+    </script>
+      
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const dropdown = document.querySelector(".dropdown");
+          const toggle = dropdown.querySelector(".dropdown-toggle");
+          const menu = dropdown.querySelector(".dropdown-menu");
+          const arrow = dropdown.querySelector(".dropdown-arrow");
+
+          toggle.addEventListener("click", (e) => {
+            e.preventDefault();
+            dropdown.classList.toggle("open");
+            arrow.classList.toggle("rotated");
+          });
+
+          // Close dropdown if clicked outside
+          document.addEventListener("click", (e) => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove("open");
+              arrow.classList.remove("rotated");
+            }
+          });
+        });
+    </script>
+
+    <script>
+      function animateCounter(counter) {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000; // duration in ms
+        const frameRate = 30;
+        const step = target / (duration / frameRate);
+
+        let current = 0;
+
+        const updateCounter = () => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = target;
+          } else {
+            counter.textContent = Math.ceil(current);
+            requestAnimationFrame(updateCounter);
+          }
+        };
+
+        updateCounter();
+      }
+
+      // Store previous visibility status
+      const counters = document.querySelectorAll('.counter');
+      let visibilityMap = new WeakMap();
+
+      function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top <= window.innerHeight &&
+          rect.bottom >= 0
+        );
+      }
+
+      function handleScroll() {
+        counters.forEach((counter) => {
+          const visible = isInViewport(counter);
+          const wasVisible = visibilityMap.get(counter);
+
+          if (visible && !wasVisible) {
+            animateCounter(counter);
+          }
+
+          visibilityMap.set(counter, visible);
+        });
+      }
+
+      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('load', handleScroll); // run on page load too
+    </script>
+
+    <script>
+      const isTouchDevice = () => {
+        return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+      };
+
+      if (isTouchDevice()) {
+        document.querySelectorAll('.flip-card').forEach(card => {
+          card.addEventListener('click', function () {
+            const inner = this.querySelector('.flip-card-inner');
+            inner.classList.toggle('flipped');
+          });
+        });
+      }
+    </script>
+
+    <script>
+      (function () {
+        const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+        if (!isTouch) return; // only attach for touch devices
+
+        document.querySelectorAll('.wwd-card').forEach(card => {
+          card.addEventListener('click', function (e) {
+            // if clicked the CTA link inside or an anchor, allow default
+            const tag = e.target.tagName.toLowerCase();
+            if (tag === 'a' || this.querySelector('a') === e.target) return;
+            // toggle overlay open/close
+            this.classList.toggle('overlay-open');
+          });
+        });
+
+        // Optional: close overlay if click outside any card overlay
+        document.addEventListener('click', function (e) {
+          if (!e.target.closest('.wwd-card')) {
+            document.querySelectorAll('.wwd-card.overlay-open').forEach(c => c.classList.remove('overlay-open'));
+          }
+        });
+      })();
+    </script>
+
+
+    <!-- AOS JS -->
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+      <script>
+          AOS.init({
+            duration: 1000,
+            once: false,
+          });
+      </script>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>We create design-driven digital experiences tailored to your brand. Passion meets precision in everything we do.</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact-hero">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Design</a></li>
+            <li><a href="#">Branding</a></li>
+            <li><a href="#">UI/UX</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:awodiran.akintayo@yahoo.com">info@example.com</a>
+            </li>
+            <li><i class="fas fa-phone"></i> +234 904 461 6648</li>
+            <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+          </ul>
+        <div class="contact-socials" data-aos="fade-up" data-aos-delay="500">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/2349044616648" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bravo Solutions. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+ 
+</html>

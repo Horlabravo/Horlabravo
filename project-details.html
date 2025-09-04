@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+            <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-left">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <span class="follow-text">Follow us on social media</span>
+      </div>
+      <div class="top-right">
+        <span><i class="fas fa-phone-alt"></i> +234 904 461 6648</span>
+        <span><i class="fas fa-envelope"></i> 
+          <a href="mailto:contact@youragency.com" class="email-link">bravo.solutions@yahoo.com</a>
+        </span>
+      </div>
+    </div>
+
+      <!-- Header / Navbar -->
+    <header class="main-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="Bravo Solutions Logo" />
+        </a>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" id="focus">Projects</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">
+              Our Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fas fa-paint-brush"></i> Graphics Design</a></li>
+              <li><a href="#"><i class="fas fa-code"></i> Web Design</a></li>
+              <li><a href="#"><i class="fas fa-cube"></i> Product Design</a></li>
+              <li><a href="#"><i class="fas fa-bullhorn"></i> Branding</a></li>
+              <li><a href="#"><i class="fas fa-vector-square"></i> UI/UX</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    
+
+
+
+
+    <!-- JavaScript -->
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        const hamburger = document.querySelector(".hamburger");
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      }
+    </script>
+    
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const dropdown = document.querySelector(".dropdown");
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+        const menu = dropdown.querySelector(".dropdown-menu");
+        const arrow = dropdown.querySelector(".dropdown-arrow");
+
+        toggle.addEventListener("click", (e) => {
+          e.preventDefault();
+          dropdown.classList.toggle("open");
+          arrow.classList.toggle("rotated");
+        });
+
+        // Close dropdown if clicked outside
+        document.addEventListener("click", (e) => {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove("open");
+            arrow.classList.remove("rotated");
+          }
+        });
+      });
+    </script>
+</body>
+</html>

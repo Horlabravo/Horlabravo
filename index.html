@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>bravosolutions.com</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <span class="follow-text">Follow us on social media</span>
+    </div>
+    <div class="top-right">
+      <span><i class="fas fa-phone-alt"></i> +234 904 461 6648</span>
+      <span><i class="fas fa-envelope"></i> 
+        <a href="mailto:contact@youragency.com" class="email-link">bravo.solutions@yahoo.com</a>
+      </span>
+    </div>
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="main-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Bravo Solutions Logo" />
+      </a>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" id="focus">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Our Services <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><i class="fas fa-paint-brush"></i> Graphics Design</a></li>
+            <li><a href="#"><i class="fas fa-code"></i> Web Design</a></li>
+            <li><a href="#"><i class="fas fa-cube"></i> Product Design</a></li>
+            <li><a href="#"><i class="fas fa-bullhorn"></i> Branding</a></li>
+            <li><a href="#"><i class="fas fa-vector-square"></i> UI/UX</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="welcome-section">
+    <div class="background-wrapper">
+      <div class="background-slideshow">
+        <img src="images/designer.jpg" class="slide" alt="Design 1" />
+        <img src="images/developer.jpg" class="slide" alt="Design 2" />
+        <img src="images/UiUx.jpg" class="slide" alt="Design 3" />
+      </div>
+      <div class="dark-overlay"></div>
+    </div>
+    <div class="welcome-content">
+      <h1>Welcome to Bravo Solutions</h1>
+      <p>
+        At Bravo Solutions, we specialize in creating powerful digital experiences that elevate your brand.
+        Whether you need striking graphic designs, modern and responsive websites, or captivating UI/UX designs,
+        we're here to turn your vision into reality. Let’s craft something remarkable together.
+      </p>
+      <div class="welcome-buttons">
+        <a href="#about" class="btn btn-primary">FIND OUT MORE</a>
+        <a href="#contact" class="btn btn-secondary">GET IN TOUCH</a>
+      </div>
+    </div> 
+  </section>
+
+  <section id="projects" class="projects-preview">
+    <div class="container">
+      <h2 class="section-title" data-aos="zoom-in">Our Recent Work</h2>
+      <p class="section-subtitle" data-aos="zoom-in">A few highlights from what we've been working on</p>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card" data-aos="fade-up">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/webisteulid.png" alt="Project 1">
+              <div class="project-info">
+                <h3>Website Redesign</h3>
+                <p>Modern UI/UX for a tech company</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>More Info</h3>
+              <p>This redesign improved usability and increased user engagement.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card" data-aos="zoom-in">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/branding.png" alt="Project 2">
+              <div class="project-info">
+                <h3>Brand Identity</h3>
+                <p>Complete logo and brand system</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>More Info</h3>
+              <p>This redesign improved usability and increased user engagement.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card" data-aos="fade-down">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="images/Appdesign.jpg" alt="Project 3">
+              <div class="project-info">
+                <h3>Finance App UI</h3>
+                <p>Designed a sleek, user-friendly interface for a digital finance application</p>
+              </div>
+            </div>
+            <div class="card-back">
+              <h3>More Info</h3>
+              <p>This redesign improved usability and increased user engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- ✅ End of .projects-grid -->
+
+      <!-- ✅ View More inside .container -->
+      <div class="view-more">
+        <a href="projects.html" class="view-more-btn" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-arrow-right" style="margin-right: 6px;"></i>
+          View more projects
+        </a>
+      </div>
+    </div> <!-- ✅ End of .container -->
+  </section>
+
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Our Services</h2>
+      <p class="section-subtitle" data-aos="fade-up">
+        Providing <em>creative solutions</em> to meet your business needs
+      </p>
+
+      <div class="services-grid" data-aos="zoom-in">
+        <!-- Graphics Design -->
+        <div class="service-card">
+          <i class="fas fa-paint-brush service-icon"></i>
+          <h3>Graphics Design</h3>
+          <p>We craft stunning visuals for digital and print media that effectively communicate your brand identity.</p>
+        </div>
+
+        <!-- Web Design -->
+        <div class="service-card">
+          <i class="fas fa-globe service-icon"></i>
+          <h3>Web Design</h3>
+          <p>We build responsive, user-friendly websites that engage users and bring your ideas to life online.</p>
+        </div>
+
+        <!-- Product Design -->
+        <div class="service-card">
+          <i class="fas fa-box-open service-icon"></i>
+          <h3>Product Design</h3>
+          <p>From concept to prototype, we design digital products with a focus on usability and innovation.</p>
+        </div>
+
+        <!-- Branding -->
+        <div class="service-card">
+          <i class="fas fa-bullhorn service-icon"></i>
+          <h3>Branding</h3>
+          <p>We develop cohesive brand strategies, including logos, colors, and messaging that leave a lasting impression.</p>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="service-card">
+          <i class="fas fa-mobile-alt service-icon"></i>
+          <h3>UI/UX</h3>
+          <p>We design intuitive interfaces and experiences that improve user satisfaction and business outcomes.</p>
+        </div>
+
+        <!-- Go to Services Link -->
+        <a href="services.html" class="service-card service-link-card">
+          <i class="fas fa-arrow-right service-icon"></i>
+          <h3>Go to Services</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <!-- Animate image -->
+      <div class="about-image" data-aos="fade-right">
+        <!-- Decorative blob -->
+        <svg class="about-blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#00bcd4" opacity="0.1" d="M42.3,-66.2C54.5,-56.4,64.4,-45,67.4,-32.4C70.4,-19.9,66.6,-6.2,63.7,8.8C60.9,23.8,58.9,39.9,50.3,51.9C41.8,63.9,26.7,71.8,11.5,71.1C-3.7,70.3,-18.9,61,-34.7,52.1C-50.5,43.3,-67,34.8,-71.4,21.8C-75.7,8.7,-67.9,-8.9,-59.8,-23.9C-51.7,-39,-43.2,-51.4,-31.7,-61.4C-20.2,-71.5,-10.1,-79.3,2.2,-82.1C14.5,-84.9,28.9,-82,42.3,-66.2Z" transform="translate(100 100)" />
+        </svg>
+
+        <span class="about-bar"></span>
+        <img src="images/aboutimage.jpg" alt="About Us Image" />
+      </div>
+
+      <!-- Animate text content -->
+      <div class="about-text" data-aos="fade-left">
+        <h2 class="about-heading" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-users"></i> ABOUT US
+        </h2>
+
+        <p data-aos="fade-up" data-aos-delay="200" data-aos-offset="100" data-aos-duration="800">
+          We are a dynamic team of designers and developers passionate about transforming ideas into engaging, visual experiences. Our commitment lies in delivering design-driven solutions that blend creativity and functionality.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="300" data-aos-offset="100" data-aos-duration="800">
+          With a strong background in graphic design, branding, and UI/UX strategy, we tailor each project to reflect the unique voice of our clients while maintaining global design standards. Every pixel we place has a purpose.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="400" data-aos-offset="100" data-aos-duration="800">
+          Collaboration is at the core of what we do. Whether it's web design, product storytelling, or visual branding, we thrive on turning challenges into beautiful solutions that speak directly to your audience.
+        </p>
+
+        <!-- Animate button -->
+        <a href="about.html" class="find-out-more-btn" data-aos="zoom-in" data-aos-delay="500">
+          Find Out More <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <!-- Left text content -->
+      <div class="contact-text" data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="contact-heading" data-aos="fade-down" data-aos-delay="100">
+          <i class="fas fa-paper-plane" style="color:#00bcd4; margin-right: 10px;"></i>
+          GET IN TOUCH
+        </h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Have a project in mind or just want to say hello? We’d love to hear from you. Let’s work together to create something exceptional.
+        </p>
+        <p data-aos="fade-up" data-aos-delay="300">
+          Reach out to us today, and we’ll get back to you as soon as possible. Your ideas deserve to be heard and brought to life.
+        </p>
+        <a href="contact.html" class="contact-button" data-aos="zoom-in" data-aos-delay="400">
+          Contact Us
+          <i class="fas fa-arrow-right arrow-icon"></i>
+        </a>
+      </div>
+
+      <!-- Right image -->
+      <div class="contact-image" data-aos="fade-left" data-aos-duration="1000">
+        <img src="images/customercare.png" alt="Contact Illustration" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      const hamburger = document.querySelector(".hamburger");
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("active");
+    }
+  </script>
+  
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const dropdown = document.querySelector(".dropdown");
+      const toggle = dropdown.querySelector(".dropdown-toggle");
+      const menu = dropdown.querySelector(".dropdown-menu");
+      const arrow = dropdown.querySelector(".dropdown-arrow");
+
+      toggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        dropdown.classList.toggle("open");
+        arrow.classList.toggle("rotated");
+      });
+
+      // Close dropdown if clicked outside
+      document.addEventListener("click", (e) => {
+        if (!dropdown.contains(e.target)) {
+          dropdown.classList.remove("open");
+          arrow.classList.remove("rotated");
+        }
+      });
+    });
+  </script>
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll('.background-slideshow .slide');
+    let currentIndex = 0;
+
+    function showSlides() {
+      // Remove active, enter, and exit classes from all slides
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active', 'enter', 'exit');
+        if (index === currentIndex) {
+          slide.classList.add('exit');
+        }
+      });
+
+      // Move to the next slide
+      currentIndex = (currentIndex + 1) % slides.length;
+
+      // Add classes to animate the new slide in
+      const nextSlide = slides[currentIndex];
+      nextSlide.classList.add('active', 'enter');
+
+      // Optional: Remove the 'exit' class from all slides after animation ends
+      setTimeout(() => {
+        slides.forEach(slide => slide.classList.remove('exit'));
+      }, 1000); // match your CSS transition duration
+    }
+
+    showSlides(); // Show the first slide immediately
+    setInterval(showSlides, 7000); // Change slide every 7 seconds
+  });
+  </script>
+
+ <script>
+    AOS.init({
+      once: false, // animation resets on scroll out
+      duration: 800, // animation duration in ms
+      easing: 'ease-in-out', // easing type
+    });
+  </script>
+
+  <script>
+    // Only enable click-to-flip for screens 768px and below
+    if (window.innerWidth <= 768) {
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', function () {
+          this.classList.toggle('flipped');
+        });
+      });
+    }
+  </script>
+
+  <script>
+    AOS.init({
+      once: false, // animation resets on scroll out
+      duration: 800,
+      easing: 'ease-in-out',
+    });
+  </script>
+  
+  <script>
+  // Initialize AOS
+  AOS.init({
+    duration: 1000,
+    once: false,
+    easing: 'ease-out',
+  });
+
+  // Grow bar animation on scroll
+  document.addEventListener("DOMContentLoaded", function () {
+    const aboutImage = document.querySelector('.about-image');
+    const aboutBar = document.querySelector('.about-bar');
+
+    if (aboutImage && aboutBar) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            aboutBar.classList.add('animate');
+          } else {
+            aboutBar.classList.remove('animate');
+          }
+        });
+      }, {
+        threshold: 0.4
+      });
+
+      observer.observe(aboutImage);
+    }
+  });
+  </script>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>We create design-driven digital experiences tailored to your brand. Passion meets precision in everything we do.</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Product Design</a></li>
+          <li><a href="#">Branding</a></li>
+          <li><a href="#">UI/UX</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:awodiran.akintayo@yahoo.com">info@example.com</a>
+          </li>
+          <li><i class="fas fa-phone"></i> +234 904 461 6648</li>
+          <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+        </ul>
+       <div class="contact-socials" data-aos="fade-up" data-aos-delay="500">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/2349044616648" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Bravo Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

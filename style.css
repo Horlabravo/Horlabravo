@@ -172,7 +172,7 @@ color: black;
 }
 
 .hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(5px, 6px);
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -180,7 +180,7 @@ color: black;
 }
 
 .hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Base dropdown menu styling */
@@ -1053,8 +1053,8 @@ color: black;
   .hamburger {
     display: flex;
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 2.5rem;
+    right: 1rem;
   }
 
   .nav-links {
@@ -1062,10 +1062,10 @@ color: black;
     align-items: flex-start;
     background-color: white;
     position: absolute;
-    top: 70px;
+    top: 85px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 115%;
     padding: 20px 30px;
     visibility: hidden;
     opacity: 0;
@@ -1120,7 +1120,7 @@ color: black;
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     transform: translateX(-10px);
@@ -1156,7 +1156,7 @@ color: black;
 @media (max-width: 768px) {
   .welcome-section {
     position: relative;
-    height: 75vh;
+    height: 80vh;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1205,7 +1205,7 @@ color: black;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.55); /* Makes the background darker */
+    background-color: rgba(0, 0, 0, 0); /* Makes the background darker */
     z-index: 1;
   }
   
@@ -1245,12 +1245,12 @@ color: black;
 
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
 
   .project-card {
-    height: 400px; /* Maintain card height for flipping */
+    height: 200px; /* Maintain card height for flipping */
     max-width: 100%;
   }
 
@@ -1293,15 +1293,17 @@ color: black;
   }
 
   .project-info h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin-bottom: 0;
   }
 
   .project-info p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+    margin-top: 0;
   }
 
   .card-front img {
-    height: 180px;
+    height: 80px;
   }
 
   .view-more {
@@ -1331,24 +1333,24 @@ color: black;
 /* Mobile View: 1 column */
 @media (max-width: 768px) {
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .service-card {
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
 
   .service-card i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
   }
 
   .service-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .service-card p {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1365,11 +1367,11 @@ color: black;
   }
 
   .about-heading {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .about-text p {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
   }
 
   .find-out-more-btn {
@@ -1527,6 +1529,16 @@ color: black;
   .hero-text p {
     font-size: 1rem;
   }
+
+  .hero-image img {
+  max-width: 105%;
+  height: auto;
+  animation: floatIn 1.2s ease-in-out;
+  border-radius: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
 }
 
 /* Contact Info Section */
